@@ -1,0 +1,32 @@
+import math
+#task 1 : calculate PPI for for a 6.1 inch smartphone display with a resolution of 1170 * 2532 pixels
+w = 1170
+h = 2532
+i = 6.1
+
+d= math.sqrt(w**2 + h**2)
+
+ppi = round(d / i, 2)
+
+print("PPI of smartphone = ",ppi)
+
+#task 2 : calculate the uncompressed frame buffer memory required for a 4k UHD resolution (3840 * 2160) using 32-bit RGBA.
+
+w = 3840
+h = 2160
+pixels = w * h 
+bytes_per_pixel = 32/ 8 
+memory = pixels * bytes_per_pixel
+MB = round(memory / 1048576, 2)
+print("4K RGBA frame buffer = ",MB)
+
+
+w = 1920
+h = 1080
+bits = 24
+
+fbits = w * h * bits 
+Rbitrate = fbits * 60
+
+throughput = round(Rbitrate / 10 ** 9, 2)
+print("1080p @ 60 FPS throughput = ",throughput)
